@@ -20,27 +20,26 @@
     <nav class="navbar navbar-expand-lg fade-in fixed-top">
       <div class="container">
         <a class="navbar-brand" href="#">
-              <img src="images/logoo.png" alt="Logo" width="80" height="70" style="border-radius: 50%;">
-              </a>
-              <button class="navbar-toggler text-info" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbtn bg-white">
-                  <i class="fas fa-home"></i>
-                </span>
-                </button>
-                <button class="btn btn-outline-primary btn-sm" id="dark-mode-button" onclick="toggleDarkMode()">Dark Mode</button>
-
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav" style="margin-left: 250px;">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#reviews">Book Reviews</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#challenges">Reading Challenges</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#userDiscussions">Discussions</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#join">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#faqs">FAQs</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
-                </ul>
-            </div>
+          <img src="images/logoo.png" alt="Logo" width="80" height="70" style="border-radius: 50%;">
+        </a>
+        <button class="navbar-toggler text-info" type="button" onclick="toggleNavbar()">
+          <span class="navbtn bg-white">
+            <i class="fas fa-home"></i>
+          </span>
+        </button>
+        <button class="btn btn-outline-primary btn-sm" id="dark-mode-button" onclick="toggleDarkMode()">Dark Mode</button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav" style="margin-left: 250px;">
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#reviews">Book Reviews</a></li>
+            <li class="nav-item"><a class="nav-link" href="#challenges">Reading Challenges</a></li>
+            <li class="nav-item"><a class="nav-link" href="#userDiscussions">Discussions</a></li>
+            <li class="nav-item"><a class="nav-link" href="#join">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="#faqs">FAQs</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+          </ul>
         </div>
+      </div>
     </nav>
 
     <!-- Home -->
@@ -401,7 +400,7 @@
         </div>
     </div>
 </div>
-    </div>
+</div>
 
     <!-- Contact -->
     <div data-aos="fade-in" data-aos-offset="150">
@@ -511,9 +510,13 @@
             easing: 'ease-in-out',
             // delay: 500,
           });
-        </script>
+          function toggleNavbar() 
+          {
+            var navbar = document.getElementById("navbarNav");
+            navbar.classList.toggle("collapse");
+          }
 
-        <script src="java.js"></script>
-        
+        </script>
+        <script src="java.js"></script> 
 </body>
 </html>
